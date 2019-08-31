@@ -23,8 +23,6 @@ body{
 	margin-top:2%;
 	align-content:center;
 
-
-
 }
 
 .content .title{
@@ -46,6 +44,7 @@ body{
 	-webkit-box-shadow: 5px 9px 15px -12px #000000; 
 	box-shadow: 5px 9px 15px -12px #000000;
 
+
 }
 
 
@@ -63,6 +62,7 @@ body{
 	display:flex;
 	justify-content:flex-end;
 	margin:-15px 20px;
+	cursor:pointer;
 
 }
 
@@ -85,6 +85,43 @@ body{
 
 }
 
+.card-temperature{
+	
+	display:flex;
+	margin-top:20px;
+	margin-left:22px;
+	flex-direction:row;
+	flex-wrap:wrap;
+
+
+}
+
+.card-temperature i{
+	
+	color:#f37335;
+}
+
+#arrowUp{
+
+	margin-left:10px;
+}
+
+.card-temperature span{
+
+	margin-left:10px;
+
+}
+
+.line-card {
+
+	width:90%;
+	margin:20px auto;
+}
+
+.line-card hr{
+
+	border:1px solid #fdc830;
+}
 .content .search{
 	
 	display: flex;
@@ -110,7 +147,7 @@ body{
 	font-size:18px;
 }
 
-i{
+#btnPesquisar{
 
 	color:#A4A4A4;
 	font-size:22px;
