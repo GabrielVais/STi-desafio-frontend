@@ -38,7 +38,7 @@ body{
 .content .card{
 	
 	width:500px;
-	height:250px;	
+	height:280px;	
 	background:#f7f1e3;
 	margin:10px auto;
 	-webkit-box-shadow: 5px 9px 15px -12px #000000; 
@@ -121,6 +121,23 @@ body{
 .line-card hr{
 
 	border:1px solid #fdc830;
+}
+
+.card-days{
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: space-around;
+}
+
+.card-2{
+
+	margin-top:10px;
+	color:#f37335;
+	font-weight:bold;
 }
 .content .search{
 	
