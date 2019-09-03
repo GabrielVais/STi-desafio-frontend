@@ -30,10 +30,7 @@ const btnPesquisar = document.querySelector('#btnPesquisar');
 
 btnPesquisar.addEventListener('click', function(){
 
-   getClima();
-
-
-        
+      getClima();
 
 })
 
@@ -41,17 +38,27 @@ async function getClima(){
             
           try{
 
-            let cidade = document.querySelector('#pesquisar').value;
-         
-            let response = await fetch(`https://api.github.com/users/${usuario}`);
+            let local = document.querySelector('#pesquisar').value;
+            
+            let url = `https://api.hgbrasil.com/stats/find_woeid?key=17284dd0&format=json-cors&sdk_version=console&city_name=${local}`;
 
-            var dados = {};
+            let response = await fetch(url);
 
-            dados = await response.json()
+            var dadosCidade = {};
 
-              console.log(dados)
+            dadosCidade = await response.json()
 
-              return dados;
+            let dadosCidadeCode = dadosCidade.woeid;
+
+            console.log(dadosCidade.woeid)
+
+            let url2 = `http://api.hgbrasil.com/weather?woeid=${dadosCidade.woeid}&key=cf27ca00`;
+
+            let response2 = await fetch(url2);
+
+            let dados = {};
+
+            console.log(dados);
 
           }
          
@@ -71,7 +78,7 @@ async function getClima(){
                 <th>Max</th>
               </tr>
               <tr>
-                <td>${dados.followers}</td>
+                <td></td>
                 <td>27</td>
                 <td>rio de janeiro</td>
               </tr>
@@ -85,8 +92,6 @@ async function getClima(){
                 <td>27</td>
                 <td>rio de janeiro</td>
           </tr>`;
-
-           
 
       }
           
