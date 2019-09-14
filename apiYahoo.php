@@ -10,9 +10,6 @@ if(isset($_REQUEST["location"])){
 
 }
 
-
-
-// Copyright 2019 Oath Inc. Licensed under the terms of the zLib license see https://opensource.org/licenses/Zlib for terms.
 function buildBaseString($baseURI, $method, $params) {
     $r = array();
     ksort($params);
