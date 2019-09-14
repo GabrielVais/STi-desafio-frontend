@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Api Clima-Desafio</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-		<script src="https://kit.fontawesome.com/5e4dc12b90.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Lato|Oxygen&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<script src="https://kit.fontawesome.com/5e4dc12b90.js"></script>
 </head>
 <body class="body">
 	<section class="content">
@@ -21,18 +22,18 @@
 				<i class="fa fa-close"></i>
 			</div>
 			<div class="card-header">
-				<h2>20C Nublado</h2>
+				<h2 id="header-title">20C Nublado</h2>
 			</div>
 			<div class="card-temperature">
 			<i class="fa fa-arrow-down" aria-hidden="true"></i>
-			<span>18C</span>
+			<span id="tempMin">18C</span>
 			<i class="fa fa-arrow-up" aria-hidden="true" id="arrowUp"></i>
-			<span>30C</span>
-			<span>Sensaçao <strong>19C</strong></span>
+			<span id="tempMax">30C</span>
+			<span>Sensaçao <strong id="tempSen">19C</strong></span>
 			</div>
 			<div class="card-temperature">
-			<span>Vento <strong>18KM</strong></span>
-			<span>Humidade <strong>89%</strong></span>
+			<span>Vento <strong id="vento">18KM</strong></span>
+			<span>Humidade <strong id="humidade">89%</strong></span>
 			</div>
 			<div class="line-card">
 			<hr/>
@@ -45,7 +46,7 @@
 				<span><strong>Sabado</strong></span>
 
 			</div>
-			<div class="card-days card-2">
+			<div class="card-days card-2" id="cardDays">
 				<span>18 26</span>
 				<span>18 28</span>
 				<span>19 30</span>
@@ -54,7 +55,9 @@
 			</div>
 		</div>
 		<div class="search">
-			<input type="text" name="" placeholder="Insira aqui o nome da cidade" id="pesquisar">
+			<form id="formulario">
+			<input type="text" placeholder="Insira aqui o nome da cidade" id="pesquisar" name="location">
+			</form>
 			<i class="fas fa-search" id="btnPesquisar"></i>
 		</div>
 		<div class="line">
@@ -70,25 +73,7 @@
 				
 				</table>
 				<table class="table1">
-				  <tr>
-				    <th>Min</th>
-				    <th>Max</th>
-				  </tr>
-				  <tr>
-				    <td>18</td>
-				    <td>27</td>
-				    <td>rio de janeiro</td>
-				  </tr>
-				   <tr>
-				    <td>18</td>
-				    <td>27</td>
-				    <td>rio de janeiro</td>
-				  </tr>
-				   <tr>
-				    <td>18</td>
-				    <td>27</td>
-				    <td>rio de janeiro</td>
-				  </tr>
+				  
 				</table>
 			</div>
 		</div>
